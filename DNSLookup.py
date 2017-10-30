@@ -9,10 +9,9 @@ import socket
 host=str(sys.argv[1])
 
 # (DNS Lookup [Name to IP])
-print(socket.gethostbyname(host))
+# print(socket.gethostbyname(host))
 
 # (Reverse DNS Lookup [IP to Name])
-# result = socket.gethostbyaddr(host)
+result = socket.gethostbyaddr(host)
 
 print(result[0])
-
