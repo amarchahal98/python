@@ -1,9 +1,8 @@
 import sys
 import socket
-# query = str(sys.argv[1])
+import os
 
-host = socket.gethostname()
+var = str(sys.argv[1])
+ip = socket.gethostbyname(var)
 
-print(host)
-
-# print(query)
+print(ip)
