@@ -1,7 +1,7 @@
 # Testing isatty functionality (Is stdin being piped?)
 
 import sys
-# (Interactive
+# (Interactive)
 if sys.stdin.isatty():
     print("isatty")
 
