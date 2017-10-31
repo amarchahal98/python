@@ -6,22 +6,22 @@ import sys
 
 # (FUNC)
 
-def check_vcn(domain_name):
+def check_vcn(domain):
     VCN_IP = "207.102.64."
 
     try:
-        ip = socket.gethostbyname(domain_name)
+        ip = socket.gethostbyname(domain)
         # (If domain matches VCN's IP)
         if ip.startswith(VCN_IP):
-            print("VCN Domain: " + domain_name)
+            print("VCN Domain: " + domain)
 
         # (If domain does not match VCN's IP)
         elif not ip.startswith(VCN_IP):
-            print("Non-VCN Domain: " + domain_name)
+            print("Non-VCN Domain: " + domain)
 
     # (If DNS query was not successful)
     except socket.gaierror:
-        print("Invalid Domain: " + domain_name)
+        print("Invalid Domain: " + domain)
 
 
 def main(argv):
