@@ -27,9 +27,18 @@ def searchFunc(contains):
 
 ip = '192.168.0.1'
 internaldomain = "192.168."
-if ip.startswith(internaldomain):
-    print("LAN IP")
-else:
-    print("Foreign IP")
+#if ip.startswith(internaldomain):
+#    print("LAN IP")
+#else:
+#    print("Foreign IP")$a
 
+## str.upper/str.lower
+strEdit = "Hello World"
+rmvstr = "Hello"
+addstr = "Hi"
+#print(strEdit.upper())
+#print(len(strEdit))
+#print(strEdit.lstrip(rmvstr))
+#print(strEdit.replace(rmvstr, addstr))
+#print(strEdit.split(" "))
 
