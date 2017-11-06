@@ -1,11 +1,11 @@
 #!/bin/bash
 
-nameserver="google"
-var2="bing"
-var1="bing"
-var3="google"
+# vars
+nameserver=$@
 
-if [[ $nameserver != $var3 && $nameserver != $var1 ]] ; then
+IFS=$'\r\n' GLOBIGNORE='*' command eval  'ns=($(cat nameserver.txt))'
+
+if [[ $nameserver != ${ns[0]} && $nameserver != ${ns[1]} && $nameserver != ${ns[2]} && $nameserver != ${ns[3]} ]] ; then
   echo "no match"
 
   else 
