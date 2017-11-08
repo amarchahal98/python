@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# usage: cat "domain" | bash ns_check.sh
+
 #vars
 ns1=felix.vcn.bc.ca
 ns2=sylvester.vcn.bc.ca

@@ -1,33 +1,39 @@
 #( Import Modules)
+
 import dns
 import os
 import socket
 import sys
 from dns import resolver
 
-# (FUNC)
+def compare_mailserver(mailserver, domain):
+    mxfile = open('mailserver.txt', 'r')
+    check = False
+    for line in mxfile:
+        if line.strip() == mailserver:
+            check = True
+            break
+    if not check:
+        print(domain)
 
-def lookup_mx(mailserver, domain):
+def mx_resolver(domain):
+    try:
+        data = dns.resolver.query(domain, 'MX')
+        mx_match = False
+        for server in data:
+            url = str(server)
+            if mx_match == False:
+                mx_match = compare_mailserver(url, domain)
+            
+    except dns.resolver.NoAnswer:
+        print('No MX Record: ', domain)
 
-    mxlist = dns.resolver.query(domain, 'MX')
-    for mx in mxlist:
-        print(mx)
+if len(sys.argv) == 2:
+    mx_resolver(sys.argv[1])
+elif not sys.stdin.isatty():
+    for line in sys.stdin:
+        mx_resolver(line.strip());
 
-def main(argv):
-    usage = True
-    if not sys.stdin.isatty():
-        for line in sys.stdin.readlines():
-            lookup_mx(line.strip())
-        usage = False
-    if len(sys.argv) >= 1:
-        for arg in argv:
-            lookup_mx(arg)
-        usage = False
-    if usage:
-        print('Usage: python', sys.argv[0], '"[domain name]"')
-        print('Usage: cat [text file] | python ', sys.argv[0])
-
-
-if __name__ == '__main__':
-    main(sys.argv[1:])
-
+else:
+    print('Usage: python ', sys.argv[0], '"domain name"')
+    print('Usage: cat "text file" | python ', sys.argv[0])
