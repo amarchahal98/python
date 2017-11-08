@@ -15,8 +15,6 @@ def compare_nameserver(nameserver, domain_name):
     if not check:
         print(domain_name)
 
-
-
 def lookingup_dns(domain_name):
     try:
         data = dns.resolver.query(domain_name, "NS")
@@ -32,7 +30,6 @@ def lookingup_dns(domain_name):
 
     except:
         print("option3: ", domain_name)
-
 
 
 def main(argv):

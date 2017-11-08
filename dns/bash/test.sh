@@ -46,5 +46,3 @@ do
 done
 
 
-#ns=${ns%?}
- #for ns in `dig -t NS \"$domain\" +short`
