@@ -32,7 +32,7 @@ if len(sys.argv) == 2:
     mx_resolver(sys.argv[1])
 elif not sys.stdin.isatty():
     for line in sys.stdin:
-        mx_resolver(line.strip());
+        mx_resolver(line.strip())
 
 else:
     print('Usage: python ', sys.argv[0], '"domain name"')

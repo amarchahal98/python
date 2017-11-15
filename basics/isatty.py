@@ -3,8 +3,8 @@
 import sys
 # (Interactive)
 if sys.stdin.isatty():
-    print("isatty")
+    print("No stdin was piped")
 
 # (Data is being piped)
 elif not sys.stdin.isatty():
-    print("not isatty")
+    print("Data is being piped")
