@@ -1,7 +1,11 @@
+#!/usr/bin/python3
+# Exercise 16 - Reading and Writing Files
+
 # Common methods for files:
 # close - Closes the file.
 # read - Reads content of the file. Can assign the result to a var
 # readline - Read one line of a text file
+# readlines - Read all lines of a text file
 # truncate - Empties the file. Watch for this if file is important
 # write('text') - Writes 'text' to the file
 # seek(0) - Move the read/write location to beginning of the file
@@ -30,6 +34,8 @@ line3 = input("line 3: ")
 
 print("These lines will be written into the file.")
 
+## The following have been commented out as it has been shortened to a
+## one-liner.
 #target.write(line1)
 #target.write("\n")
 #target.write(line2)
