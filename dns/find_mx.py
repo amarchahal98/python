@@ -1,5 +1,7 @@
 #( Import Modules)
 
+# Using subdomains (ex. mail.google.ca) gives an error. Dig shows mx records)
+
 import dns
 import os
 import socket
