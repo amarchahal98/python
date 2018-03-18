@@ -29,4 +29,3 @@ print(f"\nAge: {age}, \nHeight: {height}, \nWeight: {weight}, \nIQ: {iq}")
 
 what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
 print("That becomes: ", what, "Can you do it by hand?")
-
