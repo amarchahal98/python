@@ -1,3 +1,0 @@
-var = True
-
-print(var)
