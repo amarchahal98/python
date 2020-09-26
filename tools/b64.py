@@ -9,6 +9,7 @@ f = open(filename, "r")
 
 
 for line in f:
+    line = line.rstrip("\n")
     lineb = line.encode("ascii")
     b64bytes = base64.b64encode(lineb)
     b64string = b64bytes.decode("ascii")
