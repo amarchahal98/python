@@ -1,3 +1,0 @@
-this is some sample text on line 1.
-Line 2.
-This is the last line of the file.
